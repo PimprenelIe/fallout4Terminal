@@ -1,0 +1,67 @@
+#info {
+    height: 12%;
+}
+
+#fichiers
+{
+    /*height: 76%;*/
+    margin-left: 20px;
+    margin-right: 20px;
+    position: relative;
+    top: 10px;
+    text-overflow: clip;
+    /*overflow: hidden;*/
+    text-align:justify;
+    display:flex;
+    flex-direction: column;
+    width:720px;
+    padding-right: 60px;
+    overflow-y: scroll;
+    height: 360px;
+
+}
+span{
+    margin-top:0.1rem;
+    margin-bottom: 0.1rem;
+}
+
+.denied{
+    color: #a8a8a8;
+}
+
+#footer
+{
+    width: 80%;
+    height: 10%;
+    margin-left: 20px;
+    position: relative;
+    top: 20px;
+}
+
+
+.blink{
+    background-color: #33dd88;
+    color: #112211;
+    -webkit-animation: blink 1s step-end infinite;
+    -moz-animation: blink 1s step-end infinite;
+    -o-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+    67% { background-color: transparent; color: #33dd88;}
+}
+
+@-moz-keyframes blink {
+    67% { background-color: transparent; color: #33dd88;}
+}
+
+@-o-keyframes blink {
+    67% { background-color: transparent; color: #33dd88;}
+}
+
+@keyframes blink {
+    67% { background-color: transparent; color: #33dd88;}
+}
+
+

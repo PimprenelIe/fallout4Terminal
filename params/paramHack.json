@@ -1,0 +1,98 @@
+{
+  "titre": {
+    "value": "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL<br />ENTER PASSWORD NOW",
+    "title": "Titre de l'écran",
+    "type": "text"
+  },
+  "messageAttempsLeft": {
+     "value": "ATTEMPT(S) LEFT",
+    "title": "Message 'Nombre d'essai restant'",
+    "type": "text"
+  },  
+    "messageCorrect": {
+     "value": "correct",
+    "title": "Message 1/4 'correct'",
+    "type": "text"
+  },    
+ "messageTerminalLocked": {
+     "value": "TERMINAL LOCKED<br />PLEASE CONTACT AN ADMINISTRATOR",
+    "title": "Message si mot de passe incorrect et plus d'essai possible",
+    "type": "text"
+  }, 
+  "messageBlocageEnCours": {
+    "value": "Lockout in progress !",
+    "title": "Message en cours de blocage quand mot de passe incorrect",
+    "type": "text"
+  },  
+  "messageVieRegagne": {
+    "value": "Allowance replenished.",
+    "title": "Message si vies regagnées pendant hacking",
+    "type": "text"
+  },
+  "messageMotSupprime": {
+    "value": "Dud removed.",
+    "title": "Message si utilisation d'une aide qui supprime un mot",
+    "type": "text"
+  },     
+  "messageMotDePasseCorrect": {
+    "value": "Exact match! Please wait while system is accessed.",
+    "title": "Message si mot de passe trouvé",
+    "type": "text"
+  },   
+  "accessDenied": {
+    "value": "Entry denied",
+    "title": "Message d'accès interdit",
+    "type": "text"
+  },
+  "columnHeight": {
+    "value": 17,
+    "title": "Nombre de lignes",
+    "type": "number"
+  },
+  "wordColumnWidth": {
+    "value": 12,
+    "title": "Nombre de caractères par ligne",
+    "type": "number"
+  },
+  "count": {
+    "value": 12,
+    "title": "Nombre de mot dans le jeu (nombre pair)",
+    "type": "number"
+  },
+  "difficulty": {
+    "value": 6,
+    "title": "Nombre lettre par mot",
+    "type": "number"
+  },
+  "letterInCommonMin": {
+    "value": 3,
+    "title": "Nombre de lettre en commun min",
+    "type": "number"
+  },
+  "letterInCommonMax": {
+    "value": 4,
+    "title": "Nombre de lettre en commun max",
+    "type": "number"
+  },
+  "langage": {
+    "value": "fr",
+    "title": "Langue des mots",
+    "type": "text",
+    "disabled": "true"
+  },
+  "dudLength": {
+    "value": 8,
+    "title": "Taille des chaines d'aide",
+    "type": "number"
+  },
+  "blockTime": {
+    "value": 5,
+    "title": "Temps d'attente si hack raté (s)",
+    "type": "number"
+  },
+  "attemptsRemaining": {
+    "value": 4,
+    "title": "Nombre d'essai",
+    "type": "number"
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "titre": {
+    "value": "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK <br /><br />",
+    "title": "Titre de l'écran",
+    "type": "text"
+  },
+  "messageErreur": {
+    "value": "ERROR ! Commande non reconnue.",
+    "title": "Message d'erreur si commande non valide",
+    "type": "text"
+  },
+  "messageDejaMin": {
+    "value": "Le niveau de sécurité est déjà à son minimum.",
+    "title": "Message qui apprait si la sécurité diminue mais est déjà au minimum",
+    "type": "text"
+  },
+  "messageDejaMax": {
+    "value": "Le niveau de sécurité est déjà à son maximum.",
+    "title": "Message qui apprait si la sécurité augmente mais est déjà au maximum",
+    "type": "text"
+  },
+  "messageNiveauDiminue": {
+    "value": "Le niveau de sécurité a été diminué.",
+    "title": "Message quand niveau de sécurité diminue",
+    "type": "text"
+  },
+  "messageNiveauAugmente": {
+    "value": "Le niveau de sécurité a été augmenté.",
+    "title": "Message quand niveau de sécurité augmente",
+    "type": "text"
+  },
+  "messageNiveauDejaModifie": {
+    "value": "Le niveau de sécurité a déjà été modifié récemment, veuillez patienter.",
+    "title": "Message quand niveau de sécurité est bloqué pendant un certain temps",
+    "type": "text"
+  },
+  "codeJoueur": {
+    "value": "RSA1EK4G6ZAF15",
+    "title": "Clé de hackage",
+    "type": "text"
+  },
+  "uuidTerminal": {
+    "value": "AE-0F54-6C37",
+    "title": "Numéro de série du terminal",
+    "type": "text"
+  },
+  "minutesDifficultyBlocked": {
+    "value": 2,
+    "title": "Nombre de minute minimum entre deux changement de difficulté",
+    "type": "number"
+  },
+  "messageSecurite": {
+    "value": [
+      "Niveau de sécurité : minimum",
+      "Niveau de sécurité : très faible",
+      "Niveau de sécurité : faible",
+      "Niveau de sécurité : faible",
+      "Niveau de sécurité : normale",
+      "Niveau de sécurité : normale",
+      "Niveau de sécurité : haute",
+      "Niveau de sécurité : élevée",
+      "Niveau de sécurité : fortement élevée",
+      "Niveau de sécurité : confidentiel"
+    ],
+    "title": "Messages des niveau de sécurité",
+    "type": "array"
+  },
+  "minSecurite": {
+    "value": 1,
+    "title": "Accréditation minimum possible (1 à minima)",
+    "type": "number"
+  },
+  "maxSecurite": {
+    "value": 10,
+    "title": "Accréditation maximum possible (10 au maximum)",
+    "type": "number"
+  },
+  "nbErrorBeforeDifficultyUp": {
+    "value": 3,
+    "title": "DEPRECATED Nombre d'erreur avant que la difficulté n'aumgente toute seule",
+    "type": "number"
+  },
+  "workflowArray": {
+    "value": {
+      "1": {
+        "Command1": "SET TERMINAL INQUIRE {{uuidTerminal}}",
+        "Response1": "RIT-300",
+        "Command2": "SET FILE PROTECTION OWNER:RWED ACCOUNTS;F",
+        "Response2": "",
+        "Command3": "SET HALT MAINT",
+        "Response3": "Initializing Robco Industries (TM) MF Boot Agent v2.3.0<br/>RETROS BIOS<br />RBIOS-4.02.08.00 52EE5.E7.E8<br />Copyright 2201-2203 Robco Ind.<br />Uppermen: 64 KB<br />Root (5A8)<br />Maintenance Mode",
+        "Command4": "RUN DEBUG ACCOUNTS;F",
+        "Response4": "hack"
+      },
+      "2": {
+        "Command1": "FDISK;F",
+        "Response1": "FsType Label UUID {{uuidTerminal}}"
+      },
+      "3": {
+        "Command1": "SUDO RESIZEDOWN;ID {{uuidTerminal}}",
+        "Response1": "down"
+      },
+      "4": {
+        "Command1": "SUDO RESIZEUP;ID {{uuidTerminal}}",
+        "Response1": "up"
+      },
+      "5": {
+        "Command1": "SUDO ECHO DIFF;ID {{uuidTerminal}}",
+        "Response1": "diff"
+      },
+      "6": {
+        "Command1": "ADMIN403 HACK",
+        "Response1": "hack"
+      },
+      "7": {
+        "Command1": "ADMIN403 EXPLORE",
+        "Response1": "explore"
+      },
+      "8": {
+        "Command1": "ADMIN403 UP",
+        "Response1": "up"
+      },
+      "9": {
+        "Command1": "ADMIN403 DOWN",
+        "Response1": "down"
+      },
+      "10": {
+        "Command1": "ADMIN403 DIFF",
+        "Response1": "diff"
+      }
+    },
+    "title": "Workflows d'accueil",
+    "type": "object"
+  }
+}

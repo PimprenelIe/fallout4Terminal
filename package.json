@@ -1,22 +1,42 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "Terminaltor",
+  "version": "1.2.0",
+  "description": "Terminal inspired by Fallout",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
+  "author": "Nicolas VINCENT",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^19.0.6"
-  }
+    "electron": "^19.0.8",
+    "electron-builder": "^23.1.0",
+    "electron-rebuild": "^3.2.8"
+  },
+  "dependencies": {
+    "node-gyp": "^9.0.0",
+    "serialport": "^10.4.0"
+  },
+    "build": {
+        "appId": "terminaltor",
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "icon.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "installerIcon": "icon.ico",
+            "uninstallerIcon": "icon.ico",
+            "uninstallDisplayName": "terminaltor-uninstaller",
+            "allowToChangeInstallationDirectory": true,
+            "license": "LICENSE.md"
+        },
+        "extraResources": [
+            "fichiers",
+            "params"
+        ]
+    }
 }

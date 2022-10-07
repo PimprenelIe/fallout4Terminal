@@ -1,0 +1,40 @@
+{
+  "titre": {
+    "value": "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK <br/> En route pour la joie <br/>",
+    "title": "Titre de l'écran",
+    "type": "text"
+  },
+  "codeHide": {
+    "value": [
+        "AWK 1"
+    ],
+    "title": "Le premier élèment du tableau affichera le dossier hide1, le deuxième hide2,.... Mettre en majuscule !",
+    "type": "array"
+  },
+  "messageFichierVide": {
+    "value": "Fichier Vide.",
+    "title": "Message si un fichier est vide",
+    "type": "text"
+  },
+  "messageAudioEnCours": {
+    "value": "[AUDIO] En cours de lecture...",
+    "title": "Message à l'écran quand un audio se lance",
+    "type": "text"
+  },
+  "messageSecurite": {
+    "value": [
+      "Minimum",
+      "Très faible",
+      "Faible",
+      "Faible",
+      "Normale",
+      "Normale",
+      "Haute",
+      "Elevée",
+      "Fortement élevée",
+      "Confidentiel"
+    ],
+    "title": "Messages des niveau d'accréditation pour holobande: doit correspondre au même param dans paramAccueil.json",
+    "type": "array"
+  }
+}
