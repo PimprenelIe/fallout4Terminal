@@ -1,0 +1,15 @@
+{
+  "events": [
+      {
+        "value": {
+            "deactivate-1": "",
+            "activate-1": "A1",
+            "deactivate-2": "A2",
+            "activate-2": ""
+        },
+        "title-1": "Activer le générateur",
+        "title-2": "Désactiver le générateur",
+        "type": "event"
+      }
+  ]
+}

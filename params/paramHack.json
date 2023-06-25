@@ -1,11 +1,11 @@
 {
   "titre": {
-    "value": "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL<br />ENTER PASSWORD NOW",
+    "value": "BIENVENUE AUX INDUSTRIES ROBCO (TM) TERMINALTOR <br /> Entrez le mot de passe.",
     "title": "Titre de l'écran",
     "type": "text"
   },
   "messageAttempsLeft": {
-     "value": "ATTEMPT(S) LEFT",
+     "value": "ESSAI(S) RESTANT",
     "title": "Message 'Nombre d'essai restant'",
     "type": "text"
   },  
@@ -15,32 +15,32 @@
     "type": "text"
   },    
  "messageTerminalLocked": {
-     "value": "TERMINAL LOCKED<br />PLEASE CONTACT AN ADMINISTRATOR",
+     "value": "TERMINAL BLOQUÉ<br />CONTACTEZ UN ADMINISTRATEUR",
     "title": "Message si mot de passe incorrect et plus d'essai possible",
     "type": "text"
   }, 
   "messageBlocageEnCours": {
-    "value": "Lockout in progress !",
+    "value": "Blocage en cours !",
     "title": "Message en cours de blocage quand mot de passe incorrect",
     "type": "text"
   },  
   "messageVieRegagne": {
-    "value": "Allowance replenished.",
+    "value": "Allocation reconstituée.",
     "title": "Message si vies regagnées pendant hacking",
     "type": "text"
   },
   "messageMotSupprime": {
-    "value": "Dud removed.",
+    "value": "Mot supprimé.",
     "title": "Message si utilisation d'une aide qui supprime un mot",
     "type": "text"
   },     
   "messageMotDePasseCorrect": {
-    "value": "Exact match! Please wait while system is accessed.",
+    "value": "Correspondance exacte ! Merci d'attendre que le système se charge.",
     "title": "Message si mot de passe trouvé",
     "type": "text"
   },   
   "accessDenied": {
-    "value": "Entry denied",
+    "value": "Entrée refusée",
     "title": "Message d'accès interdit",
     "type": "text"
   },

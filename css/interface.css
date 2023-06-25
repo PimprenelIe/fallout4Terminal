@@ -1,0 +1,19 @@
+ #console{
+    width: 760px;
+    overflow-y: scroll;
+    height: 330px;
+    margin-top: 15px;
+    color: #a8a8a8;
+}
+
+.cmd{
+    color: #33dd88;
+}
+
+#entry
+{
+    width: 730px;
+    height: 37px;
+    margin-left: 10px;
+    border-bottom: solid 1px;
+}

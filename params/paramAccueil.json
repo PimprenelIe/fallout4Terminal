@@ -1,11 +1,11 @@
 {
   "titre": {
-    "value": "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK <br /><br />",
+    "value": "BIENVENUE AUX INDUSTRIES ROBCO (TM) TERMINALTOR <br /><br />",
     "title": "Titre de l'écran",
     "type": "text"
   },
   "messageErreur": {
-    "value": "ERROR ! Commande non reconnue.",
+    "value": "ERREUR ! Commande non reconnue.",
     "title": "Message d'erreur si commande non valide",
     "type": "text"
   },
@@ -88,7 +88,7 @@
         "Command2": "SET FILE PROTECTION OWNER:RWED ACCOUNTS;F",
         "Response2": "",
         "Command3": "SET HALT MAINT",
-        "Response3": "Initializing Robco Industries (TM) MF Boot Agent v2.3.0<br/>RETROS BIOS<br />RBIOS-4.02.08.00 52EE5.E7.E8<br />Copyright 2201-2203 Robco Ind.<br />Uppermen: 64 KB<br />Root (5A8)<br />Maintenance Mode",
+        "Response3": "Initialisation Industries Robco (TM) MF Agent démarrage v2.3.0<br/>RETROS BIOS<br />RBIOS-4.02.08.00 52EE5.E7.E8<br />Copyright 2201-2203 Robco Ind.<br />Uppermen: 64 KB<br />Root (5A8)<br />Maintenance Mode",
         "Command4": "RUN DEBUG ACCOUNTS;F",
         "Response4": "hack"
       },
@@ -127,6 +127,14 @@
       "10": {
         "Command1": "ADMIN403 DIFF",
         "Response1": "diff"
+      },
+      "11": {
+        "Command1": "ADMIN403 INTERFACE",
+        "Response1": "interface"
+      },
+      "12": {
+        "Command1": "OPEN CONFIG ACCESS",
+        "Response1": "interface"
       }
     },
     "title": "Workflows d'accueil",

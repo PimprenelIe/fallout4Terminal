@@ -1,0 +1,9 @@
+eau : 1 caps
+sirop : 2 caps
+café / thé : 2 caps
+Nuka Cola (verre) : 4 caps
+Nuka Cola (bouteille) : 7 caps
+Nuka Quantum (verre) : 50 caps
+encas : 4 caps
+soupe : 4 caps
+compote : 4 caps

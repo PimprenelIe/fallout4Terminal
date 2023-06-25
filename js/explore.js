@@ -10,11 +10,22 @@ var Params = {
     messageFichierVide: "Fichier Vide.",
     messageAudioEnCours: "[AUDIO] En cours de lecture...",
     sound: true,
-    messageSecurite: []
+    messageSecurite: [],
+    portHolobande: 'COM10',
+    portEvent: 'COM11',
 };
+
+
+var events = [];
+var eventsKey = "";
 
 const paramsPath = __dirname + '/../../params/paramExplore.json';
 const paramsPathDefault = __dirname + '/../params/paramExplore.json';
+
+const eventsPath = __dirname + '/../../params/paramEvent.json';
+const eventsPathDefault = __dirname + '/../params/paramEvent.json';
+
+const historicPath = __dirname + '/../historique';
 
 var path = __dirname + '/../../fichiers';
 const pathDefault = __dirname + '/../fichiers';
@@ -40,6 +51,10 @@ var serialPort = null;
 var exit = false;
 var serialport_opened = false;
 
+
+var serialPortEvent = null;
+var serialPortEventOpened = false;
+
 var BreakException = {};
 
 window.onload = function () {
@@ -49,7 +64,8 @@ window.onload = function () {
     }
     
     loadConfiguration();
-
+    loadEvents();
+    
     if (Params.sound)
         $("#poweron")[0].play();
 
@@ -83,93 +99,262 @@ serialRead = function (type = "normal") {
 async function listSerialPorts() {
   await SerialPort.list().then((ports, err) => {
     if (ports.length !== 0 && serialport_opened == false) {
+//      ports.forEach(port => {
+//          portCom = port.path;
+//          
+//        serialPort = new SerialPort( {
+//            path: portCom,
+//            baudRate: 9600,
+//            autoOpen: false,
+//        }); 
+//
+//        serialPort.open(function (error) {
+//            if ( error ) {
+//                if(verbose == 1){
+//                    console.log('failed to open: ' + error);
+//                }
+//            } else {
+//               if(verbose == 1){
+//                  console.log('serial port opened');
+//                  console.log('serial port init: ' + init);
+//                }
+//
+//                serialport_opened = true;
+//
+//                // get data from connected device via serial port
+//                serialPort.on('data', function(data) {
+//                    
+//                    if(init){
+//                        init = false;
+//                        return;
+//                    }
+//                    
+//                    // get buffered data and parse it to an utf-8 string
+//                    data = data.toString('utf-8');
+//                
+//                    
+//                    var previousHolobande = holobande;
+//                    var nextHolobande = parseInt(data);
+//                    
+//                    if(isNaN(nextHolobande) || nextHolobande == 0){
+//                        nextHolobande = previousHolobande;
+//                        nbHolobandeError++;
+//                        if(nbHolobandeError > 5  ){
+//                            nextHolobande = "";
+//                            nbHolobandeError = 0;
+//                        }
+//                    }else{
+//                         nbHolobandeError = 0;
+//                    }
+//
+//                    holobande = nextHolobande;
+//                
+//                     if(previousHolobande !== nextHolobande){
+//                        serialRead();
+//                     }
+//                    
+//                    if(verbose == 1){
+//                        console.log('Data: ' + data);
+//                    }
+//
+//                });
+//
+//
+//                if(verbose == 1){
+//                   serialPort.on('error', function(data) {
+//                     console.log('Error: ' + data);
+//                  })        
+//                }
+//            }
+//        });
+//
+//          
+//          return;
+//          
+//      })
+    
+    
+    
       ports.forEach(port => {
-          portCom = port.path;
-          
-        serialPort = new SerialPort( {
-            path: portCom,
-            baudRate: 9600,
-            autoOpen: false,
-        }); 
+                  
+          if(port.path == Params.portHolobande){
+              
+                 if(serialPort != null && serialPort.isOpen){
+                     return;
+                 }
+              
+                portCom = port.path;
+         
+                serialPort = new SerialPort( {
+                    path: portCom,
+                    baudRate: 9600,
+                    autoOpen: false,
+                }); 
 
-        serialPort.open(function (error) {
-            if ( error ) {
-                if(verbose == 1){
-                    console.log('failed to open: ' + error);
-                }
-            } else {
-               if(verbose == 1){
-                  console.log('serial port opened');
-                  console.log('serial port init: ' + init);
-                }
-
-                serialport_opened = true;
-
-                // get data from connected device via serial port
-                serialPort.on('data', function(data) {
-                    
-                    if(init){
-                        init = false;
-                        return;
-                    }
-                    
-                    // get buffered data and parse it to an utf-8 string
-                    data = data.toString('utf-8');
-                
-                    
-                    var previousHolobande = holobande;
-                    var nextHolobande = parseInt(data);
-                    
-                    if(isNaN(nextHolobande) || nextHolobande == 0){
-                        nextHolobande = previousHolobande;
-                        nbHolobandeError++;
-                        if(nbHolobandeError > 5  ){
-                            nextHolobande = "";
-                            nbHolobandeError = 0;
+                serialPort.open(function (error) {
+                    if ( error ) {
+                        if(verbose == 1){
+                            console.log('failed to open: ' + error);
                         }
-                    }else{
-                         nbHolobandeError = 0;
-                    }
+                    } else {
+                       if(verbose == 1){
+                          console.log('serial port opened');
+                          console.log('serial port init: ' + init);
+                        }
 
-                    holobande = nextHolobande;
-                
-                     if(previousHolobande !== nextHolobande){
-                        serialRead();
-                     }
-                    
-                    if(verbose == 1){
-                        console.log('Data: ' + data);
-                    }
+                        serialport_opened = true;
 
+                        // get data from connected device via serial port
+                        serialPort.on('data', function(data) {
+
+                            if(init){
+                                init = false;
+                                return;
+                            }
+
+                            // get buffered data and parse it to an utf-8 string
+                            data = data.toString('utf-8');
+
+
+                            var previousHolobande = holobande;
+                            var nextHolobande = parseInt(data);
+
+                            if(isNaN(nextHolobande) || nextHolobande == 0){
+                                nextHolobande = previousHolobande;
+                                nbHolobandeError++;
+                                if(nbHolobandeError > 5  ){
+                                    nextHolobande = "";
+                                    nbHolobandeError = 0;
+                                }
+                            }else{
+//                                 nbHolobandeError = 0;
+                            }
+
+                            holobande = nextHolobande;
+
+                             if(previousHolobande !== nextHolobande){
+                                serialRead();
+                             }
+
+                            if(verbose == 1){
+                                console.log('Data: ' + data);
+                            }
+
+                        });
+
+
+                        if(verbose == 1){
+                           serialPort.on('error', function(data) {
+                             console.log('Error: ' + data);
+                          })        
+                        }
+                    }
                 });
+         }
+          
+          
+          
+           if(port.path == Params.portEvent){
+               
+                 if(serialPortEvent != null && serialPortEvent.isOpen){
+                     return;
+                 }
+               
+                portCom = port.path;
+
+                serialPortEvent = new SerialPort( {
+                    path: portCom,
+                    baudRate: 9600,
+                    autoOpen: false,
+                }); 
+
+                serialPortEvent.open(function (error) {
+                    if ( error ) {
+                        if(verbose == 1){
+                            console.log('failed to open: ' + error);
+                        }
+                    } else {
+                       if(verbose == 1){
+                          console.log('serial port opened');
+                          console.log('serial port init: ' + init);
+                        }
+
+                        serialPortEventOpened= true;
+
+                        // get data from connected device via serial port
+                        serialPortEvent.on('data', function(data) {
+
+                 
+                            // get buffered data and parse it to an utf-8 string
+                            data = data.toString().trim();
+                            var nextHolobande = parseInt(data);
+                            
+                            if(!isNaN(nextHolobande) || nextHolobande == 0){
+                                return;
+                            }
+                            
+                            var previousEvent = eventsKey;
+                            var nextEvent = data;
+
+//                            if(isNaN(nextHolobande) || nextHolobande == 0){
+//                                nextHolobande = previousHolobande;
+//                                nbHolobandeError++;
+//                                if(nbHolobandeError > 5  ){
+//                                    nextHolobande = "";
+//                                    nbHolobandeError = 0;
+//                                }
+//                            }else{
+//                                 nbHolobandeError = 0;
+//                            }
+
+                            eventsKey = nextEvent;
+
+                             if(previousEvent !== nextEvent){
+                                serialRead();
+                             }
+
+                            if(verbose == 1){
+                                console.log('Data: ' + data);
+                            }
+
+                        });
 
 
-                if(verbose == 1){
-                   serialPort.on('error', function(data) {
-                     console.log('Error: ' + data);
-                  })        
-                }
-            }
-        });
-
+                        if(verbose == 1){
+                           serialPort.on('error', function(data) {
+                             console.log('Error: ' + data);
+                          })        
+                        }
+                    }
+                });
+         }
+          
           
           return;
           
       })
+        
+        
+        
+        
+    
+    
     }
     
-               if(init){
-                   serialRead();
-                        init = false;
-                        return;
-                    }
+   if(init){
+       serialRead();
+            init = false;
+            return;
+        }
+console.lo
      
   })
 }
 
 function listPorts() {
     if(verbose == 1){
-        console.log("listPorts !!! - exit: " + exit);
+        
+console.log("listPorts !!! - exit: " + exit);
     }
     
     if(exit){
@@ -187,47 +372,33 @@ getFirstLevel = function () {
         console.log("holobande " + holobande);
     }
     
-        //passsing directoryPath and callback function
-    fs.readdir(path + '/' + commonFolder, function (err, files) {
-        //handling error
-        if (err) {
-            return console.log('Unable to scan directory: ' + err);
-        } 
-        //listing all files using forEach
-        files.forEach(function (file) {
-            if(file != '.' && file != '..' && file != 'Thumbs.db' && file != '.DS_Store'){
-           
-                var type = '';
-                var name = '';
-                if(file.lastIndexOf(".") == -1 ){
-                    type = 'folder';
-                    name = file;
-                }
-                else if(file.split('.').pop() == 'mp3'){
-                   type = 'audio';
-                   name = file.substring(0, file.lastIndexOf("."));
-                }
-                else{
-                    type = 'file'; 
-                    name = file.substring(0, file.lastIndexOf("."));
-                }
-                   
-            
-                var pathAll = path + '/' + commonFolder + '/' + file;  
 
-                var newNode = '<span style="overflow: hidden;" class=" ' + type + '" id="' + name.replace(/ /g, '') + '" data-path="' + pathAll + '" ></span>'
-
-                $("#fichiers").append(newNode);
-
-                JTypeFill(name.replace(/ /g, ''), '[' + name + ']', 20, function () {
-                }, "", "");
-                
-            }
-        });
-        
-        SetBlinkCursor();
-    });
+    if(events.length > 0){
     
+            var type = '';
+            var name = '';
+            var dataSerial = '';
+        
+
+            if(eventsKey === 'A'){
+                name = "Activer le générateur";
+                type = 'serial';
+                dataSerial = 'A';
+            }else{
+                name = "Activer le générateur";
+                type = 'denied';
+                dataSerial = '';
+            }
+
+            var newNode = '<span style="overflow: hidden;" class=" ' + type + '" id="' + name.replace(/ /g, '') + '" data-serial="' + dataSerial + '" ></span>'
+
+            $("#fichiers").append(newNode);
+
+            JTypeFill(name.replace(/ /g, ''), '[' + name + ']', 20, function () {
+            }, "", "");
+        
+          SetBlinkCursor();
+    }
     
     if (holobande > 0) {
 
@@ -344,6 +515,50 @@ getFirstLevel = function () {
     
     }
     
+    
+        //passsing directoryPath and callback function
+    fs.readdir(path + '/' + commonFolder, function (err, files) {
+        //handling error
+        if (err) {
+            return console.log('Unable to scan directory: ' + err);
+        } 
+        //listing all files using forEach
+        files.forEach(function (file) {
+            if(file != '.' && file != '..' && file != 'Thumbs.db' && file != '.DS_Store'){
+           
+                var type = '';
+                var name = '';
+                if(file.lastIndexOf(".") == -1 ){
+                    type = 'folder';
+                    name = file;
+                }
+                else if(file.split('.').pop() == 'mp3'){
+                   type = 'audio';
+                   name = file.substring(0, file.lastIndexOf("."));
+                }
+                else{
+                    type = 'file'; 
+                    name = file.substring(0, file.lastIndexOf("."));
+                }
+                   
+            
+                var pathAll = path + '/' + commonFolder + '/' + file;  
+
+                var newNode = '<span style="overflow: hidden;" class=" ' + type + '" id="' + name.replace(/ /g, '') + '" data-path="' + pathAll + '" ></span>'
+
+                $("#fichiers").append(newNode);
+
+                JTypeFill(name.replace(/ /g, ''), '[' + name + ']', 20, function () {
+                }, "", "");
+                
+            }
+        });
+        
+        SetBlinkCursor();
+    });
+    
+
+    
 }
 
 SetBlinkCursor = function () {
@@ -449,19 +664,61 @@ document.addEventListener('keydown', function (event) {
             var commandeTxt = html.slice(posCommande);
 
             if (commandeTxt.trim() !== "") {
+                
+                logHistoricFile(commandeTxt);
+                
                 if (commandeTxt === "EXIT") {
            
-                       exit = true;
-                    if(serialPort != null && serialPort.isOpen){
-                       serialPort.close(function (error) {                   
-                         window.location = "index.html"; 
-                      })
-                    }else{
-                         window.location = "index.html"; 
+                    exit = true;
+                    try{
+                        if(serialPort != null && serialPort.isOpen){
+                           serialPort.close(function (error) {           
+                                console.log(error);
+                          })
+                        }
+
+                        if(serialPortEvent != null && serialPortEvent.isOpen){
+                           serialPortEvent.close(function (error) {    
+                               console.log(error);
+                          })
+                        }
+                    } catch (e) {
+                        console.log(e.message);
                     }
-               
+
+                    
+                    setTimeout(() => {window.location = "index.html"}, 500);
+                    
+            
                     return;
-                } else if ((pos = Params.codeHide.indexOf(commandeTxt)) > -1) {
+                } 
+
+                else  if (commandeTxt === "STOP") {
+           
+               
+                    try{
+                        if(serialPort != null && serialPort.isOpen){
+                           serialPort.close(function (error) {           
+                               console.log(error);
+                            // window.location = "index.html"; 
+                          })
+                        }
+
+                        if(serialPortEvent != null && serialPortEvent.isOpen){
+                           serialPortEvent.close(function (error) {    
+                                  console.log(error);
+                             //window.location = "index.html"; 
+                          })
+                        }
+                    } catch (e) {
+                        console.log(e.message);
+                    }
+
+                    //window.location = "index.html"; 
+                                      
+                    return;
+                } 
+                else if ((pos = Params.codeHide.indexOf(commandeTxt)) > -1) {
                     hide = pos + 1;
                     niveau = 1;
                     getFirstLevel();
@@ -472,15 +729,38 @@ document.addEventListener('keydown', function (event) {
                 });
             } else {
                 if (cursorNode.hasClass('file')) {
-                    displayFile(cursorNode);
-                    niveau++;
+                    if (cursorNode.hasClass('cursor')) {
+                        displayFile(cursorNode);
+                        niveau++;
+                    }
                 } else if (cursorNode.hasClass('audio')) {
-                    displayAudio(cursorNode);
-                    niveau++;
+                    if (cursorNode.hasClass('cursor')) {
+                        displayAudio(cursorNode);
+                        niveau++;
+                    }
                 } else if (cursorNode.hasClass('folder')) {
                     //dossier
                     niveau++;
                     displayFolder(cursorNode, false);
+                } else if (cursorNode.hasClass('serial')) {
+        
+                    var dataSerial = cursorNode.data('serial');
+                    
+                    if(dataSerial.length > 0){
+                        if(serialPortEvent != null && serialPortEvent.isOpen){
+                             console.log('here');
+                            try {
+                                serialPortEvent.write(dataSerial, function(err) {
+                                  if (err) {
+                                    return console.log('Error on write: ', err.message)
+                                  }
+                                  console.log('message written')
+                                })
+                            } catch (error) {
+                              console.error(error);
+                            }
+                        }
+                    }
                 } else {
                     //si dossier parent vide
                     //niveau --;
@@ -503,6 +783,10 @@ document.addEventListener('keydown', function (event) {
                 niveau--;
                 getFirstLevel();
             }
+            else{
+                getFirstLevel();
+            }
+         
             break;
 
         case "Backspace":
@@ -546,6 +830,7 @@ displayFile = function (node) {
 
     var txt = '';
 
+    logHistoricFile('[txt] '+ filePath, false);
 
     fs.readFile(filePath, 'utf-8', (err, data) => {
         
@@ -561,7 +846,12 @@ displayFile = function (node) {
         txt = txt.replaceAll("\n", "<br/>")
         txt = txt.replaceAll("  ", "&nbsp;&nbsp;")
 
-        JTypeFill(node.attr('id'), txt, 2, function () {
+        var timer = 2
+        if(txt.length > 2000){
+            timer = 0;
+        }
+        
+        JTypeFill(node.attr('id'), txt, timer, function () {
         }, "", "");
     });
 
@@ -575,6 +865,8 @@ displayAudio = function (node) {
     node.html('');
     node.removeClass('cursor');
 
+    logHistoricFile('[audio] '+node.data('path'), false);
+    
     JTypeFill("fichiers", Params.messageAudioEnCours, 2, function () {
         $("#fichiers").append('<audio id="audiotest" src="'+node.data('path')+'"></audio>');
         $("#audiotest")[0].play();
@@ -588,7 +880,13 @@ displayFolder = function (node, parent) {
     var actualPath = node.data('path');
 
     if (parent == true) {
+        
         actualPath = actualPath.substr(0, actualPath.lastIndexOf("/"));
+        
+        if(node.hasClass('file') && node.hasClass('cursor')){
+            actualPath = actualPath.substr(0, actualPath.lastIndexOf("/"));
+        }
+    
     } 
 
     $('#fichiers').html('');
@@ -671,3 +969,32 @@ function loadConfiguration(){
     }
 }
 
+function loadEvents(){
+        
+    let rawdata = '';
+    
+    if (fs.existsSync(eventsPath)) {
+        rawdata = fs.readFileSync(eventsPath);
+    } else {
+        rawdata = fs.readFileSync(eventsPathDefault);
+    }
+
+    events = JSON.parse(rawdata).events;
+}
+
+function logHistoricFile(data, user = true){
+         return;
+    const date = new Date();
+//
+//    file = 'explore-'+date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+    file = 'explore';
+    
+    addPrefix = '';
+    if(user){
+        addPrefix = '--> ';
+    }
+ 
+    data = '['+ date.getHours() + '-' + date.getMinutes() + '-' + date.getSeconds() +'] ' + addPrefix + data.replaceAll('<br />','') + '\n';
+    
+    fs.appendFileSync(historicPath + '/'+file + '.txt', data, "UTF-8", {'flags': 'a+'});
+}

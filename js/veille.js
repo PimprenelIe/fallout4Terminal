@@ -1,6 +1,6 @@
 const $ = require('../vendor/jquery-3.4.1/jquery-3.4.1');
 
-var inactiveTimeLimit = 5 //minutes
+var inactiveTimeLimit = 10 //minutes
 var idleTime = 0;
 $(document).ready(function () {
     // Increment the idle time counter every minute.

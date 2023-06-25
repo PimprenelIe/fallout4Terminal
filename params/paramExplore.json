@@ -1,6 +1,6 @@
 {
   "titre": {
-    "value": "WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK <br/> En route pour la joie <br/>",
+    "value": "BIENVENUE AUX INDUSTRIES ROBCO (TM) TERMINALTOR <br/> En route pour la joie <br/>",
     "title": "Titre de l'écran",
     "type": "text"
   },
@@ -36,5 +36,15 @@
     ],
     "title": "Messages des niveau d'accréditation pour holobande: doit correspondre au même param dans paramAccueil.json",
     "type": "array"
-  }
+  },
+   "portHolobande": {
+    "value": "COM10",
+    "title": "Port du lecteur d'holobande",
+    "type": "text"
+  },
+  "portEvent": {
+    "value": "COM11",
+    "title": "Port du pérhiphérique d'évènement (différente de l'interface !)",
+    "type": "text"
+  }    
 }

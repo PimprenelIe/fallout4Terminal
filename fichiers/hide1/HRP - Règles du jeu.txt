@@ -1,0 +1,306 @@
+1.	Introduction
+Bienvenue dans le manuel de règles d’un GN post-nuklear. 
+Le manuel présent vous permettra, si vous n’êtes pas un super-mutant qui a laissé son cerveau dans la cuve d’évolution, d’aborder sereinement votre personnage et les différentes mécaniques du jeu. Ce dernier va évoluer dans un monde très largement inspiré de la série de jeux-vidéos Fallout. 
+Cependant, en consultant le document Histoires et radiations, vous constaterez que nous avons pris quelques libertés quant au contexte dans lequel va se placer votre personnage. Aussi, avant de savoir à quel point vous êtes SPECIAL. Nous vous invitons à prendre connaissance des particularités liées à l’univers du jeu.
+2.	Factions
+Voici une liste des factions connues dans la région de l’Est désolé. Pour plus de détails, le document Histoires et radiations (chapitre Factions et organisations) est à votre disposition.
+a.	Austrasie
+S’inspirant d’anciens écrits, celui qui se définit comme un roi et futur empereur, Carolus Magnus II, dirige avec l’aide de ses barons ce royaume qu’ils comptent bien étendre, jusqu’à le transformer en empire. Ces anciens pillards prospèrent sur les hauteurs de l’Est désolé et sur les flancs des monts vosgiens. Ici tout le monde a sa place, une place bien définie, comme à l’époque féodale. La démocratie a failli et a mené l’humanité à sa perte, l’Austrasie la mènera vers son futur.
+b.	Caravane Azure
+Avec les radiations, l’eau de qualité est devenue une denrée rare. Grâce aux compétences combinées d’un groupe de survivants, un épurateur d’eau a pu reprendre du service. Depuis, ce groupe de marchands a une place économique importante dans l’Est désolé et un fort lien tissé avec le Nouvel Est Fédéré. A l’inverse, les relations avec le syndicat de Saverne sont un peu tendues.
+c.	Confédération de la Croix Blanche (CCB)  
+Les forces helvètes sont sans aucun doute parmi les plus chanceuses. Avec un pays préparé aux bombes, une grande partie de la population est à l’abri sous terre pendant que les forces armées de la confédération reprennent le contrôle de la surface. La CCB cherche à rétablir la neutralité, et cela passe par la « gestion » des non-humains. Autant dire que l’ordre religieux de Fessen est dans leur collimateur. 
+d.	Disciples de Fessen
+Quand les premières visions sont apparues aux abords du réacteur, ces survivants pensaient devenir fous. Et c’est ainsi que cet ordre religieux s’est dévoué à une divinité enfermée dans une ancienne centrale nucléaire. Elevant les goules conscientes au rang d’élus et les mutants à celui de boucliers divins, les disciples sont vus d’un mauvais œil par la CCB.
+e.	Nouvel Est Fédéré (NEF) 
+Initialement composé d’anciens représentants de l’ordre, le NEF représente ce qui se rapproche le plus d’une nouvelle démocratie, avec des lois proches de l’avant-guerre. Cependant, leur autorité ne s’applique que dans leurs colonies. Pour reconstruire le monde, le NEF cherche à rassembler sous un même drapeau. Ce qui n’est pas au cœur de la préoccupation de beaucoup d’organisations qui cherchent à faire prospérer leurs idéaux, souvent incompatibles.
+f.	Habitants de l’Est désolé 
+Des survivants, ceux qui résident dans la région dévastée de l’Est désolé. Certains vivent au jour le jour, avec pour seul objectif de passer une nuit de plus. D’autres tirent leur épingle du jeu, sans pour autant adhérer à un groupe ou une faction en particulier. La plupart finissent par rejoindre un groupe qu’ils estiment correspondre à leurs valeurs. Des rumeurs circulent sur le fait que certains résidents d’abri errent aussi, mêlés à la population en toute discrétion.
+g.	Rekuperators 
+De nombreuses rumeurs courent au sujet de ces pillards qui arpentent principalement la rive teutonne du Rhin. Loin d’être spécialement agressifs, il semble que nécessité fait loi. Ils troquent parfois leurs découvertes issues des endroits les plus dangereux. Tant qu’on ne possède pas quelque chose que les rekup’ désirent, les relations sont cordiales. Mais ils veulent beaucoup de choses.
+h.	Syndicat de Saverne 
+Regroupant majoritairement des goules qui ont vécu dans l’ancien temps, dans l’ancien monde, ce syndicat du crime tente de se faire une place dans l’Est désolé. Ses activités se concentrent principalement sur tout ce qui pouvait être illégal, avant. Les rumeurs parlent de tensions avec la Caravane Azure.
+3.	Points primordiaux
+Votre personnage est défini principalement par vos choix, votre historique et vos actions. Pour le reste, des valeurs chiffrées permettent d’encadrer une partie des mécaniques de jeu. Abordons ensemble ces points primordiaux, à connaître, vraiment vraiment.
+a.	Points de vie (PV)
+Pour connaître vos chances de survie face aux menaces humaines ou mutantes, votre santé est simulée par des points de vie (PV). Vous débutez avec 4 PV max.
+Cette valeur peut être modifiée par votre race (voir Races), un trait ou temporairement avec certains consommables.
+Lorsque vous tombez à 0 ou moins, vous devenez mourant.
+b.	Points d’armure (PA)
+Vous avez peut-être la chance de porter des protections pour augmenter votre taux de survie dans les terres dévastées. Les points d’armure (PA) sont évalués en fonction de la matière et des zones couvertes. On compte deux niveaux de protections.
+Voici quelques exemples de matières reconnues : 
+- cuir, plastique, nylon, pneus : 1 PA
+- kevlar, métal : 2 PA
+Vos PA sont estimés lors du check armes et équipements, à votre arrivée sur place. Les organisateurs feront une moyenne de vos différents éléments d’armure et de la protection offerte pour déterminer votre score total.
+On perd les PA avant les PV. Lorsque l’armure n’a plus de PA, il faut la réparer auprès d’une personne avec la compétence adaptée (voir Artisan).
+Les PA sont globaux et non localisés.
+Exception : les boucliers
+Le bouclier possède 4 PA localisés. Lorsqu’il a encaissé 4 points par une arme à distance, il est endommagé et ne vous apporte plus aucune protection. Il doit alors passer entre les mains de l’artisan adapté.
+4.	Races
+Vous devriez faire le choix de la race avec celui de votre faction, car certaines de ces dernières sont parfois peu tolérantes envers certaines nouvelles… espèces. Ce choix influencera sans doute vos interactions et l’œil que portera votre voisin sur vous. Les avantages et handicaps ne sont pas en option. 
+a.	Humain
+Vous avez survécu jusque-là. C’est bien. Vraiment.
+Résultat de plus de 100 000 ans d’évolution, vous avez survécu in extremis à la fin du monde provoquée par vos congénères. Il ne tient qu’à vous d’apprendre de leurs… ou pas.
+Avantage : Aucun
+Vous êtes la race habituée à vous adapter rapidement. Il suffit de voir la fin du monde. Presque pire que des radcafards. 
+Handicap : Aucun
+Vous êtes déjà en bas de l’échelle alimentaire du nouveau monde. C’est déjà assez grave comme ça.
+b.	Goule*
+Vous avez survécu jusque-là. Mais c’est moche. Vraiment.
+Face aux radiations, comme pour de nombreuses espèces, deux réactions possibles : mourir ou évoluer. Les goules sont le résultat d’une évolution à double tranchant. Les tissus épidermiques ont littéralement foutu le camp. Et pourtant, votre santé n’a jamais été aussi bonne. La majorité des peaux lisses ont un regard exprimant le dégoût en vous voyant.
+Avantage : Nourri aux radiations
+Votre exposition aux radiations vous a sacrément entamé le profil (et le reste) mais vous allez vivre encore longtemps. Les radiations ne vous sont pas un danger pour vous. C’est même l’inverse. Lorsque vous recevez des radiations votre métabolisme fonctionne bien mieux. En revanche, vous avez toujours le risque de devenir fou en cas d’exposition prolongé. Dans ce cas vous attaquez à vue tous ceux qui vous entourent.
+Handicap : Faiblesse
+Votre corps n’est pas aussi résistant que la moyenne. Les blessures ont des conséquences plus graves. (-1 PV Max.)
+c.	Mutant*
+Vous avez survécu et évolué. Mais pas de partout.
+L’origine des mutants est sujet à controverse. Certains supposent qu’il s’agit d’expériences ayant mal tourné, d’autres croient que les radiations ont joué le rôle de déclencheur, comme pour les goules. Pour vous, ce n’est pas important. Vous êtes les plus forts, c’est ça qui compte.
+Avantage : Solide comme un roc
+Un virus évolutif vous a renforcé. Plus dur, meilleur, plus rapide, plus fort, vous êtes immunisé aux effets des radiations et d’Assommer. Vous pouvez annoncer « BREUM ! » au lieu d’« Assommer ». Il n’est pas possible d’y résister à moins d’être un mutant. Ah, et tant qu’on y est voici +1 PV Max.  C’est cadeau, ça nous fait plaisir.
+Handicap : Mou du bulbe
+Tous les muscles ne sont pas passés dans la cuve d’évolution. Vous êtes parfois long à la détente et avez un handicap mental qui peut mettre à mal votre compréhension du monde et/ou votre élocution.
+*Note : Pour des raisons d’immersion, prévoir maquillage ou masque en conséquence.
+5.	Savoir commun
+Certaines actions peuvent être menées par le premier venu qui a su survivre jusque-là. Voici ce que vous et votre voisin être capables de faire.
+a.	Assommer
+Dissimulez-vous derrière votre cible avec un objet contondant et annoncez : « Assomme. » Votre victime sombre pendant une minute au sol. 
+b.	Premiers secours
+A moins d’avoir les compétences nécessaires, un stimpack pour de la poudre de soins, seul un médecin pourra sauver la victime. Dix minutes, ça passe vite.
+c.	Voler
+Vous souhaitez dérober des effets personnels en toute discrétion ? C’est possible ! Sont volables : objets du jeu, composants d’artisanat, munitions et caps. Comme toujours, soyez fairplay et respectueux, volé comme voleur. Ne sont donc pas volables les affaires des joueurs : habits ou armes, sauf si la personne est vraiment vraiment d’accord.
+d.	Crocheter
+Envie de jouer le passe-partout ? Equipez-vous d’un kit de crochetage pour tenter le casse du siècle (ou du week-end). Les cadenas crochetables seront facilement identifiables (transparents).
+6.	S.P.E.C.I.A.L.(isations)
+Vous êtes SPECIAL. 
+Découvrez les spécialisations disponibles. Elles offrent des talents uniques qui feront de vous le héros que vous avez toujours rêvé d’être.
+a.	Soldat
+Lutteur
+Vous savez comment frapper efficacement avec vos poings, pieds et tête. Vous avez automatiquement l’ascendant lors des combats à mains nues contre les non-lutteurs. (Voir Combat à mains nues)
+Armé et dangereux
+Vous n’avez pas de limite sur le port d’armes, d’armures et pouvez utiliser un bouclier.
+b.	Programmeur
+Hack’n’Crash
+Vous savez contourner les sécurités informatiques avec le matériel adapté. Vous pouvez tenter de pirater les terminaux.
+Vous recevrez le guide du hacker.
+c.	Espion
+Mots doux
+Vous savez crypter et décrypter des textes codés, selon différents modèles.
+Vous recevrez le guide du cryptographe.
+d.	Chimiste
+Chimiste
+Vous pouvez créer des drogues ou des médicaments. Vous débuterez avec quelques recettes. (Voir la section Équipements).
+Vous recevrez le guide du petit chimiste.
+e.	Infirmier
+Médecin
+Les gros bobos, c’est votre truc. Vous pouvez remettre sur pieds quelqu’un dans un état particulièrement critique. Avec le matériel adapté, vous soignez votre patient en y passant le temps nécessaire. Plus c’est gros, plus c’est long. Votre patient sortira de l’état Mourant ou Neutralisé.
+Vous recevrez le guide du médecin.
+f.	Artisan
+Assembler & réparer
+Vous savez réparer les armes et armures, concevoir des munitions et explosifs.
+Vous recevrez le guide de l’artisan.
+g.	Leader 
+Détecteur de butins
+Vous avez trouvé un tas de trucs dans les ruines d’avant-guerre, utiles ou pas. Vous pourrez partir en expédition avec votre groupe dans les coins intéressants pour y récupérer ressources, parfois accompagnées d’emmerdes diverses (pièges, goules, pillards…)
+Vous recevrez le guide du leader.
+7.	Historique
+Il sera rédigé en collaboration avec votre responsable de faction et les rédacteurs à l’issu du renvoi de votre questionnaire.
+8.	Équipements & Services
+Vous démarrez peut-être le jeu avec une dotation livrée avec l’historique de votre personnage. Voici une liste des objets que l’on peut trouver et leurs effets.
+Les prix indiqués sont indicatifs. Les marchands pratiquent les prix selon l’offre et la demande ou simplement leurs envies. La plupart des communautés jouent plutôt du troc pour vivre. A vous de savoir si vous êtes un radpigeon ou pas.
+Chaque arme, corps à corps ou distance, sera le sujet d’un contrôle, pour des raisons de sécurité évidentes.
+a.	Armes à distance
+Les armes de type Nerf, non Rival, sont les seules autorisées sur le GN pour simuler les armes à distance. 
+Bien entendu, les autres marques sont tolérées si elles répondent aux normes de sécurité. Les armes de type artisanales ou répliques d’airsoft sont formellement interdites.
+Les non-Soldats peuvent seulement prétendre aux armes non-automatiques, à rechargement manuel, sans chargeur externe.
+Les Soldats connaissent l’art de la guerre et peuvent tout utiliser.
+Toutes les armes à distance infligent 1 point de dégât. 
+b.	Armes de contact
+Les armes de contact autorisées doivent être en latex et prévues pour pratiquer notre loisir. Elles peuvent être à une ou deux mains. 
+Nous divisons les armes de contact en trois 
+catégories :
+- courte (moins de 70cm) ; 
+- longue (70 à 110cm) ;
+- très longue (110 à 180cm) (à deux mains exclusivement).
+Toutes les armes de contact infligent 1 point de dégât. 
+Pour des questions d’immersion, les épées elfiques et autres lames venues d’univers trop déphasés avec celui que nous proposons ne seront pas acceptées. Si vous avez un doute, contactez un organisateur. 
+Les boucliers sont autorisés, sous les mêmes conditions.
+c.	Explosifs
+Les mines, grenades ou autres explosifs simulés en jeu infligent toujours 2 dégâts, le tout sur un rayon approximatif de 5 mètres.
+Les grenades explosent lorsqu’elles stoppent leur course. Oui, cela peut donner des scènes explosives.
+d.	Munitions
+Même si les armes à feu utilisent des munitions « classiques », les munitions plus lourdes sont plus rares ou complexes à produire, ce qui explique leur prix.
+Nous fournissons l’ensemble des munitions. Merci de ne pas en ramener.
+Munitions légères [Elite] - Prix moyen : 2 caps
+Munitions lourdes [Mega] -Prix moyen : 3 caps
+Cellules à fusion [Disque] - Prix moyen : 4 caps
+Note : seuls les Artisans peuvent ramasser les munitions au sol, il s’agit alors de douilles.
+e.	Drogues et médicaments
+Les drogues présentes dans le jeu ne sont pas une incitation à la consommation dans votre vie quotidienne, bien au contraire. La drogue, c’est mal. Voilà, c’est dit. Dans le cadre du jeu, les drogues seront représentées par des bonbons, de couleurs et de formes différentes. Leurs effets durent approximativement 5 minutes, après quoi vous recevez l’éventuel contrecoup.
+Note : les effets des drogues sont principalement là pour apporter du jeu autour et ne donnent que rarement des avantages particuliers.
+Addictol 
+Prix moyen : 150 caps
+Et en ce jour, vous n’aviez plus besoin d’artifices. Une dose suffit à vous retirer votre dépendance aux drogues.
+Contrecoup : aucun.
+Buffout
+Prix moyen : 20 caps
+Rend plus fort mais vous en payez le prix. Vous avez assez de force pour lutter contre des soldats entraînés et prenez l'ascendant sur ceux qui ne le sont pas grâce à votre boost de force.
+Contrecoup : Risque de dépendance.
+Jet
+Prix moyen : 5 caps
+Ce flacon pressurisé vous donne une sensation de vitesse, de force, de précision. Le monde devient lent autour de vous.
+Contrecoup : Vous êtes neutralisé. Fort risque de dépendance.
+Mentats
+Prix moyen : 20 caps
+Ces pastilles vertes vous rafraîchissent fortement ! Vous réfléchissez plus vite, plus précisément, votre logique crève le plafond.
+Contrecoup : Risque de dépendance.
+Poudre de soins
+Prix moyen : 10 caps
+Cette poudre « magique » est élaborée le plus souvent par des tribus de survivants retournés à l’état sauvage. Vous récupérez un peu de votre santé (2 PV).
+Contrecoup : Vous perdez la vue et/ou devenez sourd pendant 5 minutes.
+Psycho
+Prix moyen : 20 caps
+Cette injection rend insensible à la douleur et très hargneux. 
+Ingrédients : Acide, Fleur de cendre, Champignon cerveau.
+Contrecoup : Risque de dépendance.
+Rad-away
+Prix moyen : 35 caps
+Cette poche de liquide orange permet à votre organisme d’évacuer les radiations à vitesse grand V.
+Supprime les radiations et leurs effets, ne rend pas de PV.
+Contrecoup : aucun.
+Rad-X
+Prix moyen : 35 caps
+Cette pilule permet à votre organisme de se prémunir des radiations. Protège des radiations mais ne retire pas de niveau de radiation. Effet cumulable.
+Contrecoup : Risque de dépendance.
+Stimpack
+Prix moyen : 40 caps
+Les meilleurs amis des survivants. Cette seringue accélère le métabolisme de guérison. Vous récupérez 4 PV instantanément, qui ne peuvent pas dépasser votre maximum.
+Contrecoup : aucun.
+Risque de dépendance : La drogue c’est mal, on insiste. Après avoir consommé une drogue à risques vous avez une chance sur cinq de développer une dépendance. Pour savoir si vous êtes devenu dépendant, rendez-vous chez un orga pour tester votre résistance. La dépendance fait que vous avez besoin d’une dose environ toutes les 2 heures (hors repos de nuit) avant de vous sentir mal. 
+Le Jet : avec son fort risque de dépendance, vous avez une chance élevée de devenir dépendant (1 sur 3).
+f.	Accessoires
+Vous venez avec ce que vous voulez, tant qu’il n’y aucun élément dangereux compris dedans. Evitez par exemple d’arriver avec une panoplie complète du GIGN en parfait état ou encore avec votre glacière remplie de nourriture actuelle. C’est la fin du monde, soyez juste raisonnables et logiques.
+Masque à gaz
+Vous protège des gaz et un peu des radiations. Le masque à gaz absorbe 1 niveau de radiations. Après quoi, vous devez faire remplacer votre filtre auprès des personnes compétentes.
+Outils de crochetage*
+Permet de déverrouiller les serrures et cadenas.
+Outils de bricoleur**
+Permet de réparer un peu tout, nécessite l’archétype d’Artisan. Nécessaire également pour fabriquer les munitions, améliorer les armes et armures.
+Trousse de premiers-secours**
+Permet de dispenser les premiers soins et est nécessaire pour pratiquer les soins avancés.
+Kit de chimiste**
+Permet de confectionner des drogues et médicaments, nécessite et nécessaire pour la compétence Chimiste.
+*Note : est fourni par l’organisation
+**Note : n’est pas fourni par l'organisation.
+g.	Ressources
+Acide - Prix moyen : 3 caps
+Antiseptique - Prix moyen : 10 caps
+Champignon cerveau - Prix moyen : 3 caps
+Circuit imprimé - Prix moyen : 8 caps
+Fertilisant - Prix moyen : 3 caps
+Fleur de cendre - Prix moyen : 10 caps
+Nettoyant Abraxo - Prix moyen : 5 caps
+Pack de sang - Prix moyen : 10 caps
+Seringue - Prix moyen : 6 caps
+Douille - Prix moyen : 1 caps 
+h.	Monnaies
+Capsule random : La capsule commune. Valeur : 1.
+Capsule verte : La capsule peu commune. Valeur 5.
+Capsule bleue : La capsule rare : Valeur 10.
+Merci de jouer le jeu et de limiter l’importation de capsules issues de vos consommations personnelles hors-jeu.
+i.	Services et vie quotidienne
+Les gens les plus compétents sont souvent les plus riches, s’ils savent aussi comment rester en vie, en évitant par exemple de chercher des poux à un mutant sous Jet ou de charger un écorcheur avec un simple couteau. Voici quelques exemples de services et des prix que l’on retrouve en moyenne.
+Soins médicaux - Prix moyen : 30 caps
+Déverrouiller un terminal - Prix moyen : 20 caps
+Déverrouiller un cadenas - Prix moyen : 15 caps
+Repas complet - Prix moyen : 10 caps
+Eau (sale) - Prix moyen : 1 caps
+Eau (propre) - Prix moyen : 2 caps
+Nuka Cola - Prix moyen : 3 caps
+9.	Équipements
+Par défaut vous pouvez apporter une arme courte et une arme à distance non-automatique à rechargement manuel/sans chargeur externe avec vous. Les Soldats peuvent outrepasser cette restriction.
+Nous nous chargeons des munitions pour Nerf. Nous ne fournissons pas d’autres munitions que celles compatibles avec des produits Nerf ou équivalent. Merci de ne pas ramener les vôtres.
+10.	Combats
+La vie est rarement rose dans le nouveau monde. Elle est plutôt rouge sang quand on s’aventure où il ne faut pas.
+a.	Sécurité
+Jouer c’est bien. Jouer sans se blesser, c’est mieux.
+L’ensemble des armes présentes sur le GN seront contrôlées par les organisateurs. Toute personne ne se soumettant pas au contrôle pourra faire demi-tour et passer le reste de son week-end devant une émission de télé-réalité de mauvaise qualité pour méditer.
+Nous rappelons quelques règles standards pour le bien de tous : au corps à corps ou à distance, évitez autant que possible la tête ou les parties sensibles de l’anatomie de votre adversaire. Si vous avez un doute lors d’un affrontement, n’hésitez pas à consulter votre camarade de jeu, à prendre une pause pour être sûr que tout va bien.
+Si un incident nécessite l’intervention d’un secouriste, annoncez de manière audible « STOP AU JEU ». Les personnes capables vous seront présentées au préalable.
+b.	Combats à mains nues
+L’idée saugrenue peut vous prendre de ne pas avoir recours à la force létale. Dans le cas d’une volonté de vous battre à mains nues, de vouloir entraver ou neutraliser quelqu’un par la force, vous passez un instant en mode duel. Vous et votre ou vos opposants allez utiliser une annonce simple pour indiquer votre niveau de combat, qui va de 1 à 3 selon le modèle suivant.
+Pour simplifier : soldat + Buffout (3) > soldat = civil + Buffout (2) > civil (1).
+Exemple : Fang va provoquer Meta :
+F : Ramène-toi, mocheté ! Je suis à DEUX doigts de te latter la face.
+M : Je vais t’envoyer au tapis avec seulement TROIS doigts !
+Meta annonce son score de 3, c’est une habituée du combat et elle a pris sa dope juste avant le dessert. Fang est bon pour passer un sale quart d’heure.
+En cas d’égalité, nous vous laissons gérer l’issu du combat en amont. En cas d’impossibilité à vous entendre. Un shifumi peut faire l’affaire par exemple.
+Note : perdre un combat à mains nues vous gratifie également de la perte d’un point de vie.
+11.	Annonces & états 
+Certains effets vous mettent dans un drôle d’état. Certaines annonces aussi.
+c.	Annonces
+Annonce : Assomme
+Si vous êtes la cible, à cette annonce vous tombez inconscient pour 1 minute. (Variante : BREUM ! [Voir Mutants])
+Annonce : Radiations (ou Rad X, X étant la valeur)
+Voir Etat : Irradié.
+Annonce : STOP AU JEU !
+La sonnette d’alarme en cas d’absolue nécessité : blessure réelle ou comportement dangereux, pas pour régler un problème de règles. Contactez une personne de l’organisation pour l’informer. L’ordre est clair. Tout le monde arrête ce qu’il fait, reste à sa place, tant que la reprise du jeu n’est pas annoncée. L’utilisation de cette annonce à d’autres fins sera sévèrement punie.
+Annonce : Vraiment vraiment 
+Nous vous invitons à consulter cet article très intéressant au sujet de l’usage d’un safe word : https://www.electro-gn.com/11903-vraiment-vraiment . Une solution élégante pour ne pas sortir du jeu tout en s’assurant de continuer dans de bonnes conditions. C’est également un bon outil, comme indiqué dans l’article pour « gérer les situations de sécurité émotionnelle et de donner des indications sur le niveau de jeu que l’on attend ». Cependant, il ne faut pas abuser des bonnes choses. De la modération donc. Mais surtout, allez lire l’article en lien, vraiment vraiment.
+d.	Etats
+Etat : Décédé
+Vous êtes mort, c’est fini. Ou pas… Rendez-vous auprès d’un organisateur pour statuer sur la suite de votre aventure.
+Etat : Dépendant
+La dépendance fait que vous avez besoin d’une dose environ toutes les 2 heures avant de vous sentir mal.
+Etat : En manque
+Si vous n’avez pas consommé votre dose « vitale » votre esprit comme votre corps sont fragilisés jusqu’à la prise de votre « poison ».
+Etat : Inconscient
+Vous êtes incapable d’agir, de quelque façon que ce soit.
+Etat : Irradié
+Certaines zones ou objets ou évènements auront la mention « Radiations ». Si vous êtes affecté par l’annonce, votre état de santé se dégrade.
+Etat : Mourant
+Vous êtes gravement blessé. Si personne ne remonte vos PV dans les 10 minutes, vous allez mourir, définitivement, pour de bon. Ces 10 minutes peuvent passer à zéro, si votre adversaire décide de vous achever sur place.
+Etat : Neutralisé
+Vous êtes conscient, mais ne pouvez pas entreprendre d’action autre que vous déplacer lentement. Vous êtes sévèrement épuisé. Vous devez prendre un repos d’au moins 10 minutes, sans action physique.
+12.	FAQ
+Questions et réponses que vous ne vous posiez pas, alors d’autres y ont pensé pour vous.
+a.	A propos de l’équipement
+Je n’ai pas d’armes post apo, que faire ?
+Vos armes doivent être adaptées à l’univers, à l’ambiance (pas d’armes aux couleurs originales, bleues/oranges…). Les Nerfs non-peints ne seront pas acceptés pour des raisons d’immersion.
+Quelles gammes Nerfs sont autorisées au final ?
+Dans le désordre : N-Strike Elite Mega, N-Strike Elite, N-Strike, Rebelle, Dart Tag et Vortex. Cela implique donc 3 types de munitions disponibles et fournies : Elite, Mega et Disque.
+Est-ce que je peux apporter un Nerf modifié (ressort, batterie, etc…) ?
+L’arme sera évaluée lors du contrôle. Si nous la jugeons dangereuse, elle sera interdite. Testez vos armes avant votre venue pour éviter les mauvaises surprises.
+b.	A propos de la restauration
+Quelle sera la nourriture disponible sur le site ?
+L’inscription inclut la restauration tout le long de l’évènement, à savoir 5 repas dont 2 petits-déjeuners. 
+Si vous avez des limitations alimentaires, pensez à l’indiquer dans votre questionnaire d’inscription. Notre équipe en charge de la restauration fera tout son possible pour adapter les menus en conséquence.
+Est-ce que je peux apporter de la nourriture supplémentaire ? De la boisson alcoolisée ?
+Oui, vous pouvez ramener vos douceurs pour le week-end. L’alcool est autorisé tant qu’il est consommé avec modération.
+c.	A propos des lieux 
+A partir de quand puis-je arriver ?
+Le checkpoint sera ouvert à partir de 16h00.
+Rappel : Lac du Coucou, 53 Rue du Haut Fourneau, 67130 Grandfontaine.
+Le couchage est-il en jeu ou hors-jeu ?
+Les chambres fournies seront en jeu et des armoires permettent de stocker vos effets personnels hors-jeu. En cas de doute, nous vous invitons à sécuriser vos affaires. (Voir CGV.)
+Est-ce que je peux monter un camp extérieur ?
+Des espaces peuvent accueillir des camps à l’extérieur, à vos risques et périls. Aucune dégradation ne sera tolérée en revanche. Ce qui implique aucun feu au sol, par exemple.
+Peut-on faire des feux ?
+Uniquement dans l’espace dédié.
+Il y a du courant, de l’eau potable ?
+Les deux sont en accès illimité.
+On peut se changer où ?
+Il y a de nombreuses pièces sur le site pour profiter de votre intimité.
+Y aura-t-il des photographes ?
+Oui, plusieurs.
+Je suis un ronfleur professionnel, s'il y a une piaule où je n'emmerde pas grand monde c'est mieux... pour les autres.
+Nous ferons de notre mieux pour vous répartir en conséquence.
+d.	A propos des compétences
+Il n’y a pas de compétence d’assassinat ?
+Non. Si vous devez assassiner quelqu’un, faites-le de manière RP ou bien épuisez les PV de votre adversaire, tout simplement.
+Comment fait-on pour achever ?
+Si vous adversaire semble inerte, rien de mieux que de jouer l’acte, en lui mettant une balle dans la tête, en le poignardant précisément ou en lui éclatant votre casque sur la face. Doit-on rappeler qu’il s’agit de simuler ? Pensez à la santé du joueur avant celle du personnage.
+e.	A propos du comportement
+Comment gérer la triche ?
+Il y a deux types de triche : la volontaire et l’inattention. Si vous avez mis assez de dégâts de manière manifeste à quelqu’un et qu’il continue de se battre sans ciller, rappelez à la personne qu’elle doit être fairplay. Cela ne doit pas générer un conflit hors-jeu qui risque de vous sortir du jeu et gâcher votre expérience. Contactez un organisateur dans le doute.
+Remarque sur les "gens qui tapent fort sur les désarmés" : A-t-on un droit "d'interruption de scène en cas de problème" ou chope-t-on un orga au plus vite ?
+Vous pouvez vous retirer du jeu et aller voir un orga pour lui signaler. Vous avez aussi un droit d’interruption si vous estimez que la scène va trop loin et que c’est urgent. Utilisez le « vraiment vraiment » d’abord, puis « stop au jeu » si nécessaire. 

@@ -27,6 +27,9 @@ var Params = {
 const paramsPath = __dirname + '/../../params/paramAccueil.json';
 const paramsPathDefault = __dirname + '/../params/paramAccueil.json';
 
+const historicPath = __dirname + '/../historique';
+
+
 // Variables utiles pour la marche à suivre de code
 var errorCount = 0; // Compteur d'erreur avant que la difficulté augmente
 var commande = 1; // La commande en cours dans un workflow
@@ -35,6 +38,8 @@ var keyOk = false; // Bloque l'écriture quand une réponse s'écrit
 const nbCharacterWithoutSpaceMax = 56; // Nombre de caractère max sans espace
 var nbCharacterWithoutSpace = 0; // Nombre de caractère max sans espace
 
+var historicCmd = [];
+var historicCmdNb = 0;
 
 window.onload = function () {
 
@@ -46,8 +51,6 @@ window.onload = function () {
     
     loadConfiguration();
     
- 
-
     if (Params.sound)
         document.getElementById("poweron").play();
 
@@ -87,6 +90,24 @@ function loadConfiguration(){
     }
 }
 
+function logHistoricFile(data, user = true){
+    
+    return;
+    const date = new Date();
+//
+//    file = 'accueil-'+date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+    
+    file = 'accueil';
+
+    addPrefix = '';
+    if(user){
+        addPrefix = '--> ';
+    }
+ 
+    data = '['+ date.getHours() + '-' + date.getMinutes() + '-' + date.getSeconds() +'] ' + addPrefix + data.replaceAll('<br />','') + '\n';
+    
+    fs.appendFileSync(historicPath + '/'+file + '.txt', data, "UTF-8", {'flags': 'a+'});
+}
 
 
 PopulateScreen = function () {
@@ -145,19 +166,60 @@ function replaceParams(element){
 document.addEventListener('keydown', (e) => {
     e.preventDefault();
 
+    
+    console.log(e.key);
+    
     if (keyOk == true) {
 
         let html = $('#console').html();
         let pos = html.indexOf("<blink>");
         let response = "";
+        let oldHistoricCmdNb = historicCmdNb;
+        historicCmdNb = 0;
 
         if (e.key === "Backspace") {
 
-
             html = html.slice(0, pos - 1) + html.slice(pos);
             $('#console').html(html);
+            
+        } else if (e.key === "ArrowUp") {
+            keyOk = false;
+            historicCmdNb = oldHistoricCmdNb;
+            
+            html = html.substr(0, html.indexOf("<blink>"));
+            //La commande saisie se trouve après le dernier &gt;
+            let posCommande = html.lastIndexOf("&gt;") + 4;
+            let commandeTxt = html.slice(posCommande);
+            
+            if(historicCmdNb > 0){
+               commandeTxt = historicCmd[historicCmdNb - 1 ];
+            }
+            
+        
+            if(historicCmd[historicCmdNb] == undefined){
+                historicCmdNb = 0;
+            }
+            
+            if(historicCmd[historicCmdNb] !== undefined){
+                let replacement = historicCmd[historicCmdNb];
+                
 
-        } else if (e.key === "Enter") {
+                let replaced = html.substring(0, posCommande) +
+                  replacement +
+                  "<blink>&#9608;</blink>";
+            
+                
+                console.log(html.substring(posCommande + commandeTxt.length));
+                
+                $('#console').html(replaced);
+                 
+                historicCmdNb++;
+            }
+            
+            keyOk = true;
+            
+        }
+        else if (e.key === "Enter") {
             keyOk = false;
 
             html = html.substr(0, html.indexOf("<blink>"));
@@ -166,8 +228,13 @@ document.addEventListener('keydown', (e) => {
             //La commande saisie se trouve après le dernier &gt;
             let posCommande = html.lastIndexOf("&gt;") + 4;
             let commandeTxt = html.slice(posCommande);
-
-
+            
+            logHistoricFile(commandeTxt);
+            
+            if(commandeTxt.length > 0){
+                historicCmd.unshift(commandeTxt);
+            }
+            
             if ("CLEAR" === commandeTxt) {
                 $('#console').html("");
 
@@ -229,6 +296,9 @@ document.addEventListener('keydown', (e) => {
                         response = response + "<br /><br />";
 //                    }
 
+                
+                    logHistoricFile(response, false);
+                    
                     JTypeFill("console", response, 20, function () {
                         JTypeFill("console", "", 20, function () {
                             keyOk = true;
@@ -254,6 +324,10 @@ document.addEventListener('keydown', (e) => {
                 window.location = "explore.html";
             }
             
+            if (responseCommand === "interface") {
+                window.location = "interface.html";
+            }
+            
             $('#console').html(html);
             response = "<br />" + responseCommand;
 
@@ -273,7 +347,8 @@ document.addEventListener('keydown', (e) => {
                 response = "<br />" + Params.messageSecurite[sessionStorage.getItem("difficulty")-1] + "<br /><br />";
             }
 
-
+            logHistoricFile(response, false);
+            
             JTypeFill("console", response, 20, function () {
                 JTypeFill("console", "", 20, function () {
                     keyOk = true;

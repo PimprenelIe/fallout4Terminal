@@ -22,6 +22,7 @@ const fs = require('fs');
 
 const paramHackPath = __dirname + '/../../params/paramHack.json';
 const paramHackPathDefault = __dirname + '/../params/paramHack.json';
+const historicPath = __dirname + '/../historique';
 
 var Params = {
     titre: "ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL<br />ENTER PASSWORD NOW",
@@ -102,8 +103,6 @@ window.onload = function()
     FillPointerColumns();
     SetupOutput();
 
-    Params.attemptsRemaining = 4;
-
     JTypeFill("info", Params.titre, 20, function()
               {
         UpdateAttempts();
@@ -111,6 +110,9 @@ window.onload = function()
     
     initializeWords();
 
+    logHistoricFile('[Init] attempts : ' + Params.attemptsRemaining, false);
+    logHistoricFile('[Init] difficulty : ' + Params.difficulty, false);
+    logHistoricFile('[Init] correct word : '+ Correct, false);
 }
 
 
@@ -496,11 +498,13 @@ document.addEventListener('keydown', function(event) {
             var word;
             if (cursorNode.first().hasClass("word"))
             {
+               
                 if (Params.sound)
                     $("#enter")[0].play();
                 word = cursorNode.first().attr("data-word");
                 UpdateOutput(word);
-
+                logHistoricFile('[Action] try word : '+ word, false);
+                
                 if (word.toLowerCase() == Correct.toLowerCase())
                 {
                     if (Params.sound)
@@ -604,6 +608,9 @@ SetBlinkCursor = function(){
 }
 
 RemoveDud = function(){
+    
+    logHistoricFile('[Action] remove dud', false);
+    
     var LiveWords = $(".word").not("[data-word='" + Correct.toUpperCase() + "']");
 
     var WordToRemove = $( LiveWords[ Math.floor( Math.random() * LiveWords.length) ] ).attr("data-word");
@@ -674,6 +681,9 @@ Failure = function(){
     writeWithLineMax(Params.accessDenied);
     writeWithLineMax(Params.messageBlocageEnCours);
 
+    
+    logHistoricFile('[Failure] attempts : ' + Params.attemptsRemaining, false);
+    
     $("#terminal-interior").animate({
         top: -1 * $("#terminal-interior").height()
     },
@@ -688,6 +698,10 @@ Failure = function(){
 }
 
 Success = function(){
+    
+    logHistoricFile('[Success] attempts : ' + Params.attemptsRemaining, false);
+
+    
     _gaq.push(['_trackEvent', 'Terminal', 'EndGame', 'Success']);
     $("#terminal-interior").animate({
         top: -1 * $("#terminal-interior").height()
@@ -1049,4 +1063,21 @@ function loadConfiguration(){
     for (const [key, object] of Object.entries(paramHack)) {
         Params[key] = object.value;
     }
+}
+
+function logHistoricFile(data, user = true){
+      return;
+    const date = new Date();
+//
+//    file = 'hack-'+date.getFullYear() + '-' + (date.getMonth()+1) + '-' + date.getDate();
+    file = 'hack';
+    
+    addPrefix = '';
+    if(user){
+        addPrefix = '--> ';
+    }
+ 
+    data = '['+ date.getHours() + '-' + date.getMinutes() + '-' + date.getSeconds() +'] ' + addPrefix + data.replaceAll('<br />','') + '\n';
+    
+    fs.appendFileSync(historicPath + '/'+file + '.txt', data, "UTF-8", {'flags': 'a+'});
 }
