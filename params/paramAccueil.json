@@ -40,7 +40,7 @@
     "type": "text"
   },
   "uuidTerminal": {
-    "value": "AE-0F54-6C37",
+    "value": "SEC-0F54-6C37",
     "title": "Numéro de série du terminal",
     "type": "text"
   },
@@ -64,6 +64,11 @@
     ],
     "title": "Messages des niveau de sécurité",
     "type": "array"
+  },
+  "initSecurite": {
+    "value": 5,
+    "title": "Accréditation initiale",
+    "type": "number"
   },
   "minSecurite": {
     "value": 1,

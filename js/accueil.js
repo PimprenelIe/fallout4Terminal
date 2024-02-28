@@ -1,4 +1,4 @@
-//Phase d'initialisation
+﻿//Phase d'initialisation
 
 //Premier texte avec cursor clignotant
 //Le cursor clignotant est toujours là
@@ -20,6 +20,7 @@ var Params = {
     messageSecurite: [],
     minSecurite: 1,
     maxSecurite: 10,
+    initSecurite: 5,	
     workflowArray: {},
     sound: true,
 };
@@ -55,7 +56,7 @@ window.onload = function () {
         document.getElementById("poweron").play();
 
     if (sessionStorage.getItem("difficulty") === null) {
-        sessionStorage.setItem("difficulty", "5");
+        sessionStorage.setItem("difficulty", Params.initSecurite);
     }
 
     PopulateScreen();
@@ -82,7 +83,7 @@ function loadConfiguration(){
     } else {
         rawdata = fs.readFileSync(paramsPathDefault);
     }
-
+	
     let params = JSON.parse(rawdata);
     
     for (const [key, object] of Object.entries(params)) {

@@ -1,6 +1,6 @@
 {
   "portInterface": {
-    "value": "COM10",
+    "value": "COM3",
     "title": "Port du pérhiphérique d'interface",
     "type": "text"
   }    

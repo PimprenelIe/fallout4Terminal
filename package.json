@@ -15,28 +15,30 @@
     "electron-rebuild": "^3.2.8"
   },
   "dependencies": {
+    "@electron/asar": "github:electron/asar",
     "node-gyp": "^9.0.0",
-    "serialport": "^10.4.0"
+    "serialport": "^10.4.0",
+    "sqlite3": "^5.1.2"
   },
-    "build": {
-        "appId": "terminaltor",
-        "win": {
-            "target": [
-                "nsis"
-            ],
-            "icon": "icon.ico"
-        },
-        "nsis": {
-            "oneClick": false,
-            "installerIcon": "icon.ico",
-            "uninstallerIcon": "icon.ico",
-            "uninstallDisplayName": "terminaltor-uninstaller",
-            "allowToChangeInstallationDirectory": true,
-            "license": "LICENSE.md"
-        },
-        "extraResources": [
-            "fichiers",
-            "params"
-        ]
-    }
+  "build": {
+    "appId": "terminaltor",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "terminaltor-uninstaller",
+      "allowToChangeInstallationDirectory": true,
+      "license": "LICENSE.md"
+    },
+    "extraResources": [
+      "fichiers",
+      "params"
+    ]
+  }
 }
